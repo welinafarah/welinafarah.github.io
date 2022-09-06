@@ -1,2 +1,2 @@
 # A work in progress!
-### visit [me here](www.welinafarah.github.io) to see me grow
+### visit [me here](https://welinafarah.github.io) to see me grow
