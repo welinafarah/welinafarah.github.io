@@ -1,103 +1,82 @@
+<!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
 
-    <!--body of site-->
-  <h1>Welina Farah</h1>
-  <h6>University of Massachusetts Boston: sociology, history, and American Studies.</h6>
-  <p>Lebanese Bostonian. Interests include American studies, sociology, philosophy, imperialism, colonialism, history, jogging, personal finance, dancing, nutrition, and hiking.</p>
-  
-    <!--accordion drop-down menu-->
-    <body>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    .accordion {
-      background-color: #eee;
-      color: #444;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-      transition: 0.4s;
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+  <h2>Package Deals</h2>
+  <button class="accordion">Bronze</button>
+  <div class="panel">
+    <p>
+      three rounds of edits<br> 
+      two hours of phone calls<br> 
+      two week turnaround<br>
+      $150
+    </p>
+  </div>
+
+  <button class="accordion">Silver</button>
+  <div class="panel">
+    <p>
+      five rounds of edits<br>
+      three hours of phone calls<br>
+      two week turnaround<br>
+      $300
+    </p>
+  </div>
+
+  <button class="accordion">Gold</button>
+  <div class="panel">
+    <p>seven rounds of edits<br>
+      five hours of phone calls<br>
+      one week turnaround<br>
+      $500
+    </p>
+  </div>
+  </body>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
     }
-    
-    .active, .accordion:hover {
-      background-color: #ccc; 
-    }
-    
-    .panel {
-      padding: 0 18px;
-      display: none;
-      background-color: white;
-      overflow: hidden;
-    }
-    </style>
-    </body>
-    <body>
-      <h2>Package Deals</h2>
-      <button class="accordion">Bronze</button>
-      <div class="panel">
-        <p>
-          three rounds of edits<br> 
-          two hours of phone calls<br> 
-          two week turnaround<br>
-          $150
-        </p>
-      </div>
-    
-      <button class="accordion">Silver</button>
-      <div class="panel">
-        <p>
-          five rounds of edits<br>
-          three hours of phone calls<br>
-          two week turnaround<br>
-          $300
-        </p>
-      </div>
-    
-      <button class="accordion">Gold</button>
-      <div class="panel">
-        <p>seven rounds of edits<br>
-          five hours of phone calls<br>
-          one week turnaround<br>
-          $500
-        </p>
-      </div>
-      </body>
-    
-    <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
-    </script>
-  
-  <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-  
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-  </script>
+  });
+}
+</script>
+
+</body>
 </html>
